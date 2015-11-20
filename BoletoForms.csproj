@@ -49,6 +49,10 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Impactro.Cobranca, Version=2.15.11.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Impactro.Cobranca.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -139,12 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BoletoCustomizado.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\ImpactroLibrary\Cobranca\Cobranca8.csproj">
-      <Project>{1f150b0e-39c0-4ef1-9841-f30067c8a1ca}</Project>
-      <Name>Cobranca8</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SeuLogo.gif" />
