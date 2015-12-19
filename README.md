@@ -1,46 +1,23 @@
-# Boleto-Windows-Form
-Boleto para Windows Forms C#, veja mais informações em www.boletoasp.com.br
+Boleto-Windows-Form
+===================
+Boleto para Windows Forms em C#, veja mais informações em [BoletoASP.com.br](http://www.boletoasp.com.br)
 
-Exibição de Boleto
-	HTML (ASP.Net WebControl)
-	Imagem (PNG,BMP,GDI:WindowsControl)
-	Formatos: Normal ou Carne
-	Bancos Suportados
-		001-Banco do Brasil
-        021-Banestes
-        027-Besc
-        033-Banespa Santander
-        041-Barinsul
-        047-Banese
-        047-BRB
-        091-UniCred
-        104-Caixa Económica Federal
-        151-Nossa Caixa
-        237-Bradesco
-        341-Itaú
-        347-Sudameris
-        353-Santander
-        356-Real
-        389-Mercantil
-        399-HSBC
-        409-Unibanco
-        422-Safra
-        745-CitiBank
-        748-Sicredi
-        756-SICOOB
-	
-Recursos em desenvolvimento
-	Geração em PDF - Usando iTextSharp
+Conheça alguns dos Principais recursos:
+* Exibição de Boleto
+	* WindowsControl (GDI)
+	* Imagem (PNG,BMP)
+	* Formatos: Normal ou Carne
+	* Permite fator de zoom
+	* Layout customizável
 
-Remessa/Retorno (Arquivos)
-	CNAB240 Seguimentos P/Q
-		104-Caixa - OK
-		756-SICOOB - Remessa em teste
+* Geração de arquivos de Remessa (CNAB400/CNAB240) para com os principais bancos nacionais
+	* 001-Banco do Brasil
+    * 091-UniCred
+    * 104-Caixa Económica Federal
+    * 237-Bradesco
+    * 341-Itaú
+    * 353-Santander
+    * 748-Sicredi
+    * 756-SICOOB
 
-	CNAB400 - Registros Tipo 1
-		001-Banco do Brasil - OK
-		237-Bradesco - OK (Registro Tipo 2 implementado)
-		341-Itaú - OK
-		353-Santander - OK
-		748-Sicredi - Em Homologação
-		091-UniCred - Em Homologação
+A lista completa e atualizada dos banco suportados estão descritas no [Projeto de Teste](https://github.com/impactro/Boleto-Test)
