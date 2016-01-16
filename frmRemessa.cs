@@ -156,16 +156,22 @@ namespace BoletoForm2
                 15 Conceder desconto mesmo se pago após o vencimento.
                 Atenção: Essas instruções deverão ser enviadas no Arquivo-Remessa, quando da entrada, desde que o código de ocorrência na posição 109 a 110 do registro de transação, seja “01”, para as instruções de protesto, o CNPJ / CPF e o endereço do Sacado deverão ser informados corretamente.
                 */
-                Boleto.Instrucao1 = 6; // protestar
-                Boleto.Instrucao2 = 7; // depois de 7 dias do vencimento
+                Boleto.Instrucao1 = 6; // Protestar
+                Boleto.Instrucao2 = 7; // Depois de 7 dias do vencimento
 
                 // No bRadesco não é usado o campo Comando, mas outros bancos podem usar
                 // Boleto.Comando = 0;
 
+                // As linhas a seguir customiza qualquer valor sem precisar usar o evento 'r.onRegBoleto' o que torna a implementação mais simples
+                // A forma mais pratica e segura é sempre usar os enumeradores
+                // Mas é possivel usar as duas opções como neste exemplo, mas os valores personalizados tem sempre prioridade pois são inserridos por ultimo apos todos calculos, e processamento de eventos, portanto use com cuidado!
+                Boleto.SetRegEnumValue(CNAB400Remessa1Sicredi.TipoJuros, "B");    // (posição 19) // Apenas se atente para a diferença do nome para SetRegEnumValue()
+                Boleto.SetRegKeyValue("CNAB400Remessa1Sicredi.Alteracao", "E");   // (posição 71) // É possivel adicionar o nome e valor do enumerador, isso é compativel com VB6
+                Boleto.SetRegKeyValue("Emissao", "B"); // posição 74 // ou simplesmente informar o nome do campo, mas cuidado pois há layouts que usam mais de um tipo de registro e as vezes tem nomes iguais mas as funções podem ser diferentes
+
                 // Gera um registro
                 //Boleto.Sacado = Sacado; // obrigatório para o registro
                 r.Add(Boleto, Sacado);
-
             }
 
             // o numero de exemplo '123' é apenas um numero de teste
