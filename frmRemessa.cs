@@ -168,6 +168,7 @@ namespace BoletoForm2
                 Boleto.SetRegEnumValue(CNAB400Remessa1Sicredi.TipoJuros, "B");    // (posição 19) // Apenas se atente para a diferença do nome para SetRegEnumValue()
                 Boleto.SetRegKeyValue("CNAB400Remessa1Sicredi.Alteracao", "E");   // (posição 71) // É possivel adicionar o nome e valor do enumerador, isso é compativel com VB6
                 Boleto.SetRegKeyValue("Emissao", "B"); // posição 74 // ou simplesmente informar o nome do campo, mas cuidado pois há layouts que usam mais de um tipo de registro e as vezes tem nomes iguais mas as funções podem ser diferentes
+                Boleto.SetRegEnumValue(CNAB400Remessa1Bradesco.Condicao, 1); // Apenas para Bradesco enviar o boleto para residencia
 
                 // Gera um registro
                 //Boleto.Sacado = Sacado; // obrigatório para o registro
