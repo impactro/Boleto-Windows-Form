@@ -103,6 +103,7 @@ namespace BoletoForm2
             //Boleto.ValorOutras = 12.34;
             Boleto.Instrucoes = "Todas as informações deste bloqueto são de exclusiva responsabilidade do cedente";
 
+            //BoletoInfo Boleto = new BoletoInfo();
             // O tipo de documento pode ser selecionado para cada boleto, o padrão é DM
             Boleto.Especie = Especies.DS;
 
