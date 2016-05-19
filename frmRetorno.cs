@@ -56,7 +56,7 @@ namespace BoletoForm2
                 //gv.DataSource = lay.Table(lay.GetLayoutType(0));
 
                 LayoutBancos r = new LayoutBancos(); // classe genérica para qualquer banco, compatível até com ActiveX
-                r.Init(new CedenteInfo { Banco = "104" });
+                r.Init(new CedenteInfo { Banco = "104" }, LayoutTipo.CNAB240);
                 r.Boletos.AddErroType = BoletoDuplicado.Ignore;
                 Layout ret = r.Retorno(txtRetorno.Text);
                 gvREG.DataSource = ret.Table(ret.GetLayoutType(0));

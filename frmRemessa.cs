@@ -101,7 +101,7 @@ namespace BoletoForm2
             Sacado.Avalista = "Avalista";
 
             LayoutBancos r = new LayoutBancos();
-            r.Init(Cedente);
+            r.Init(Cedente,LayoutTipo.CNAB400);
             r.Lote = CobUtil.GetInt(txtLote.Text);
             r.ShowDumpLine = chkDump.Checked;
             r.onRegBoleto += r_onRegBoleto; // Para personalizar as linhas com os campos adicionais
