@@ -38,11 +38,11 @@ namespace BoletoForm2
             //Cedente.useSantander = true; //importante para gerar o código de barras correto (por questão de compatibilidade o padrão é false)
 
             // BRADESCO
-            //Cedente.Banco = "237-2";
-            //Cedente.Agencia = "1510";
-            //Cedente.Conta = "001466-4";
-            //Cedente.Carteira = "09";
-            //Cedente.CedenteCOD = "00000000000001111111"; // 20 digitos
+            Cedente.Banco = "237-2";
+            Cedente.Agencia = "1510";
+            Cedente.Conta = "001466-4";
+            Cedente.Carteira = "09";
+            Cedente.CedenteCOD = "00000000000001111111"; // 20 digitos
 
             // ITAU
             //Cedente.CedenteCOD = "514432001";
@@ -76,11 +76,11 @@ namespace BoletoForm2
             //BoletoTextos.LocalPagamento = "PREFERENCIALMENTE NAS CASAS LOTÉRICAS ATÉ O VALOR LIMITE";
 
             // SICRED
-            Cedente.Banco = "748-2";
-            Cedente.Agencia = "1234-5";
-            Cedente.Conta = "98765-1";
-            Cedente.CodCedente = "12345";
-            Cedente.Modalidade = "04";
+            //Cedente.Banco = "748-2";
+            //Cedente.Agencia = "1234-5";
+            //Cedente.Conta = "98765-1";
+            //Cedente.CodCedente = "12345";
+            //Cedente.Modalidade = "04";
 
             // UNICRED
             //Cedente.Banco = "091-4";
@@ -167,7 +167,8 @@ namespace BoletoForm2
                 // Mas é possivel usar as duas opções como neste exemplo, mas os valores personalizados tem sempre prioridade pois são inserridos por ultimo apos todos calculos, e processamento de eventos, portanto use com cuidado!
                 Boleto.SetRegEnumValue(CNAB400Remessa1Sicredi.TipoJuros, "B");    // (posição 19) // Apenas se atente para a diferença do nome para SetRegEnumValue()
                 Boleto.SetRegKeyValue("CNAB400Remessa1Sicredi.Alteracao", "E");   // (posição 71) // É possivel adicionar o nome e valor do enumerador, isso é compativel com VB6
-                Boleto.SetRegKeyValue("Emissao", "B"); // posição 74 // ou simplesmente informar o nome do campo, mas cuidado pois há layouts que usam mais de um tipo de registro e as vezes tem nomes iguais mas as funções podem ser diferentes
+                // Cuidado ao deixar algo explicito diretamente: 
+                // Boleto.SetRegKeyValue("Emissao", "B"); // posição 74 // ou simplesmente informar o nome do campo, mas cuidado pois há layouts que usam mais de um tipo de registro e as vezes tem nomes iguais mas as funções podem ser diferentes
                 Boleto.SetRegEnumValue(CNAB400Remessa1Bradesco.Condicao, 1); // Apenas para Bradesco enviar o boleto para residencia
 
                 // Gera um registro
