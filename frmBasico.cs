@@ -47,7 +47,7 @@ namespace BoletoForm2
             // Veja com atenção qual é o seu caso e qual destas variáveis deve ser usadas!
             // Olhe sempre os exemplos em ASP.Net se tiver dúvidas, pois lá há um exemplo para cada banco
             Cedente.UsoBanco = "123";
-            Cedente.CIP = "456";
+            // Cedente.CIP = "456"; // se for informado esse campo o layout muda um pouco
 
             // Definição dos dados do sacado
             SacadoInfo Sacado = new SacadoInfo();
@@ -388,6 +388,8 @@ namespace BoletoForm2
                     }
                 }
             }
+            // salva o boleto em uma imagem
+            blt.Save("teste.png");
         }
     }
 }

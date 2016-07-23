@@ -23,6 +23,7 @@ namespace BoletoForm2
             CedenteInfo Cedente = new CedenteInfo();
             Cedente.Cedente = "TESTE QUALQUER LTDA";
             Cedente.CNPJ = "12123123/0001-01";
+            Cedente.Layout = LayoutTipo.Auto;
 
             // ABAIXO DESCOMENTE o bloco de dados do banco que pretende usar
 
@@ -101,7 +102,7 @@ namespace BoletoForm2
             Sacado.Avalista = "Avalista";
 
             LayoutBancos r = new LayoutBancos();
-            r.Init(Cedente,LayoutTipo.CNAB400);
+            r.Init(Cedente);
             r.Lote = CobUtil.GetInt(txtLote.Text);
             r.ShowDumpLine = chkDump.Checked;
             r.onRegBoleto += r_onRegBoleto; // Para personalizar as linhas com os campos adicionais
