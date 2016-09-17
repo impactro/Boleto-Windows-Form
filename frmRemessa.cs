@@ -105,7 +105,7 @@ namespace BoletoForm2
             r.Init(Cedente);
             r.Lote = CobUtil.GetInt(txtLote.Text);
             r.ShowDumpLine = chkDump.Checked;
-            r.onRegBoleto += r_onRegBoleto; // Para personalizar as linhas com os campos adicionais
+            r.onRegBoleto = r_onRegBoleto; // Para personalizar as linhas com os campos adicionais
 
             for (int n = 0; n < Int32.Parse(txtQTD.Text); n++)
             {
