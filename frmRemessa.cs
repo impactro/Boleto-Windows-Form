@@ -105,7 +105,7 @@ namespace BoletoForm2
             r.Init(Cedente);
             r.Lote = CobUtil.GetInt(txtLote.Text);
             r.ShowDumpLine = chkDump.Checked;
-            r.onRegBoleto = r_onRegBoleto; // Para personalizar as linhas com os campos adicionais
+            //r.onRegBoleto = r_onRegBoleto; // Para personalizar as linhas com os campos adicionais
 
             for (int n = 0; n < Int32.Parse(txtQTD.Text); n++)
             {
@@ -192,7 +192,7 @@ namespace BoletoForm2
                 Reg<CNAB400Remessa1Sicredi> regBoleto = (Reg<CNAB400Remessa1Sicredi>)reg;
 
                 // A rotina padrão define estas variáveis comentadas abaixo:
-                /*
+                
                 regBoleto[CNAB400Remessa1Sicredi.NumeroDocumento] = cnab.Cedente.DocumentoNumeros;
                 regBoleto[CNAB400Remessa1Sicredi.NossoNumero] = boleto.NossoNumero;
                 regBoleto[CNAB400Remessa1Sicredi.NumeroDocumento] = boleto.NumeroDocumento;
@@ -218,7 +218,7 @@ namespace BoletoForm2
                 regBoleto[CNAB400Remessa1Sicredi.SacadoDocumento] = boleto.Sacado.DocumentoNumeros;
                 regBoleto[CNAB400Remessa1Sicredi.Endereco] = boleto.Sacado.Endereco;
                 regBoleto[CNAB400Remessa1Sicredi.CEP] = boleto.Sacado.CepNumeros;
-                */
+                
 
                 // Campos com certa particulariade no sicred
                 regBoleto[CNAB400Remessa1Sicredi.Emissao] = "A"; // O padrão é que a emissão seja feito no cliente ("B")

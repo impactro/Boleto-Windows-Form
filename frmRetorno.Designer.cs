@@ -45,12 +45,11 @@
             this.txtRetorno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRetorno.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetorno.Location = new System.Drawing.Point(24, 102);
-            this.txtRetorno.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtRetorno.Location = new System.Drawing.Point(12, 53);
             this.txtRetorno.Multiline = true;
             this.txtRetorno.Name = "txtRetorno";
             this.txtRetorno.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtRetorno.Size = new System.Drawing.Size(1436, 233);
+            this.txtRetorno.Size = new System.Drawing.Size(720, 123);
             this.txtRetorno.TabIndex = 5;
             this.txtRetorno.Text = "Clique em \"Carregar\" para ler um arquivo de RETORNO CNAB,\r\ne depois clique em \"Pr" +
     "ecessar Retorno\" para ver os dados do arquivo\r\n";
@@ -59,10 +58,9 @@
             // btnLoad
             // 
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.Location = new System.Drawing.Point(24, 23);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoad.Location = new System.Drawing.Point(12, 12);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(298, 67);
+            this.btnLoad.Size = new System.Drawing.Size(149, 35);
             this.btnLoad.TabIndex = 6;
             this.btnLoad.Text = "Carregar";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -72,10 +70,9 @@
             // 
             this.btnRetorno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetorno.Location = new System.Drawing.Point(1134, 23);
-            this.btnRetorno.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRetorno.Location = new System.Drawing.Point(567, 12);
             this.btnRetorno.Name = "btnRetorno";
-            this.btnRetorno.Size = new System.Drawing.Size(326, 67);
+            this.btnRetorno.Size = new System.Drawing.Size(163, 35);
             this.btnRetorno.TabIndex = 6;
             this.btnRetorno.Text = "Processar Retorno";
             this.btnRetorno.UseVisualStyleBackColor = true;
@@ -88,11 +85,10 @@
             this.gvREG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gvREG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvREG.Location = new System.Drawing.Point(24, 549);
-            this.gvREG.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gvREG.Location = new System.Drawing.Point(12, 285);
             this.gvREG.Name = "gvREG";
             this.gvREG.ReadOnly = true;
-            this.gvREG.Size = new System.Drawing.Size(1436, 144);
+            this.gvREG.Size = new System.Drawing.Size(718, 113);
             this.gvREG.TabIndex = 7;
             // 
             // gvTB
@@ -103,37 +99,36 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gvTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTB.Location = new System.Drawing.Point(24, 704);
-            this.gvTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gvTB.Location = new System.Drawing.Point(12, 404);
             this.gvTB.Name = "gvTB";
             this.gvTB.ReadOnly = true;
-            this.gvTB.Size = new System.Drawing.Size(1436, 146);
+            this.gvTB.Size = new System.Drawing.Size(718, 103);
             this.gvTB.TabIndex = 9;
             // 
             // txtOut
             // 
             this.txtOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOut.Location = new System.Drawing.Point(24, 344);
+            this.txtOut.Location = new System.Drawing.Point(12, 179);
+            this.txtOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtOut.Multiline = true;
             this.txtOut.Name = "txtOut";
             this.txtOut.ReadOnly = true;
-            this.txtOut.Size = new System.Drawing.Size(1436, 196);
+            this.txtOut.Size = new System.Drawing.Size(720, 104);
             this.txtOut.TabIndex = 10;
             // 
             // frmRetorno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 873);
+            this.ClientSize = new System.Drawing.Size(681, 450);
             this.Controls.Add(this.txtOut);
             this.Controls.Add(this.gvTB);
             this.Controls.Add(this.gvREG);
             this.Controls.Add(this.btnRetorno);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.txtRetorno);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.MinimumSize = new System.Drawing.Size(974, 511);
+            this.MinimumSize = new System.Drawing.Size(495, 284);
             this.Name = "frmRetorno";
             this.Text = "frmRetorno";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
