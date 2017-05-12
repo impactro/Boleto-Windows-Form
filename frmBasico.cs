@@ -29,57 +29,59 @@ namespace BoletoForm2
             InitializeComponent();
         }
 
+        CedenteInfo objCedente = new CedenteInfo();
+        SacadoInfo objSacado = new SacadoInfo();
+        BoletoInfo objBoleto = new BoletoInfo();
+
+
         private void frmBasico_Load(object sender, EventArgs e)
         {
             // Definição dos dados do cedente
-            CedenteInfo Cedente = new CedenteInfo();
-            Cedente.Cedente = "Impactro Informática (teste)";
-            Cedente.Endereco = "Endereço xxx";
-            Cedente.CNPJ = "05.343.346/0001-12";
-            Cedente.Banco = "001";
-            Cedente.Agencia = "999-7";
-            Cedente.Conta = "999999-7";
-            Cedente.Carteira = "18";
-            Cedente.Modalidade = "19";
-            Cedente.Convenio = "123456";    // ATENÇÃO: Alguns Bancos usam um código de convenio para remapear a conta do clientes
-            Cedente.CodCedente = "123456";  // outros bancos chama isto de Codigo do Cedente ou Código do Cliente
+            objCedente.Cedente = "Impactro Informática (teste)";
+            objCedente.Endereco = "Endereço xxx";
+            objCedente.CNPJ = "05.343.346/0001-12";
+            objCedente.Banco = "001";
+            objCedente.Agencia = "999-7";
+            objCedente.Conta = "999999-7";
+            objCedente.Carteira = "18";
+            objCedente.Modalidade = "19";
+            objCedente.Convenio = "123456";    // ATENÇÃO: Alguns Bancos usam um código de convenio para remapear a conta do clientes
+            objCedente.CodCedente = "123456";  // outros bancos chama isto de Codigo do Cedente ou Código do Cliente
             // outros usam os 2 campos para controles distintos!
             // Veja com atenção qual é o seu caso e qual destas variáveis deve ser usadas!
             // Olhe sempre os exemplos em ASP.Net se tiver dúvidas, pois lá há um exemplo para cada banco
-            Cedente.UsoBanco = "123";
+            objCedente.UsoBanco = "123";
             // Cedente.CIP = "456"; // se for informado esse campo o layout muda um pouco
 
             // Definição dos dados do sacado
-            SacadoInfo Sacado = new SacadoInfo();
-            Sacado.Sacado = "Fabio Ferreira (Teste)";
-            Sacado.Documento = "123.456.789-99";
-            Sacado.Endereco = "Av. Paulista, 1234";
-            Sacado.Cidade = "São Paulo";
-            Sacado.Bairro = "Centro";
-            Sacado.Cep = "12345-123";
-            Sacado.UF = "SP";
-            Sacado.Avalista = "Banco XPTO - CNPJ: 123.456.789/00001-23";
+            objSacado.Sacado = "Fabio Ferreira (Teste)";
+            objSacado.Documento = "123.456.789-99";
+            objSacado.Endereco = "Av. Paulista, 1234";
+            objSacado.Cidade = "São Paulo";
+            objSacado.Bairro = "Centro";
+            objSacado.Cep = "12345-123";
+            objSacado.UF = "SP";
+            objSacado.Avalista = "Banco XPTO - CNPJ: 123.456.789/00001-23";
 
             // Definição das Variáveis do boleto
-            BoletoInfo Boleto = new BoletoInfo();
-            Boleto.NossoNumero = "12345";
-            Boleto.NumeroDocumento = "12345";
-            Boleto.ParcelaNumero = 2;
-            Boleto.ParcelaTotal = 6;
-            Boleto.Quantidade = 5;
-            Boleto.ValorUnitario = 20;
-            Boleto.ValorDocumento = Boleto.Quantidade * Boleto.ValorUnitario;
-            Boleto.DataDocumento = DateTime.Now;
-            Boleto.DataVencimento = DateTime.Now.AddDays(-30);
-            Boleto.Especie = Especies.RC;
-            Boleto.DataDocumento = DateTime.Now.AddDays(-2);     // Por padrão é  a data atual, geralmente é a data em que foi feita a compra/pedido, antes de ser gerado o boleto para pagamento
-            Boleto.DataProcessamento = DateTime.Now.AddDays(-1); // Por padrão é a data atual, pode ser usado como a data em que foi impresso o boleto
+            objBoleto.NossoNumero = "12345";
+            objBoleto.NumeroDocumento = "12345";
+            objBoleto.ParcelaNumero = 2;
+            objBoleto.ParcelaTotal = 6;
+            objBoleto.Quantidade = 5;
+            objBoleto.ValorUnitario = 20;
+            objBoleto.ValorDocumento = objBoleto.Quantidade * objBoleto.ValorUnitario;
+            objBoleto.DataDocumento = DateTime.Now;
+            objBoleto.DataVencimento = DateTime.Now.AddDays(-30);
+            objBoleto.Especie = Especies.RC;
+            objBoleto.DataDocumento = DateTime.Now.AddDays(-2);     // Por padrão é  a data atual, geralmente é a data em que foi feita a compra/pedido, antes de ser gerado o boleto para pagamento
+            objBoleto.DataProcessamento = DateTime.Now.AddDays(-1); // Por padrão é a data atual, pode ser usado como a data em que foi impresso o boleto
             
             // http://calculoexato.com.br/parprima.aspx?codMenu=DividBoletoVencido
             // Se for especificado o valor da mora, este será usado da forma mais simples
             //Boleto.ValorMora = 0.03;
-            Boleto.PercentualMulta = 0.02; // 2.0% no mês
-            Boleto.PercentualMora = 0.001; // 0.1% valor percentual ao dia...
+            objBoleto.PercentualMulta = 0.02; // 2.0% no mês
+            objBoleto.PercentualMora = 0.001; // 0.1% valor percentual ao dia...
             // Valor original: R$100,00
             // Valor da multa de 2%: R$2,00
             // Valor com multa: R$102,00
@@ -91,27 +93,27 @@ namespace BoletoForm2
             // Boleto.PercentualMora = 0.03 / 30d; // 3% ao mês
 
             // Se for especificado a data de pagamento esta será usada como base para o calculo do numero de dias em que será pago
-            Boleto.DataPagamento = Boleto.DataVencimento.AddDays(60);    
+            objBoleto.DataPagamento = objBoleto.DataVencimento.AddDays(60);    
             
             // Ativa o calculo de Juros+Mora
-            Boleto.CalculaMultaMora = true;
+            objBoleto.CalculaMultaMora = true;
 
             // Outros valores opcionais
             //Boleto.ValorDesconto = 10;
             //Boleto.DataDesconto = DateTime.Now.AddDays(-10);
             //Boleto.ValorAcrescimo = 3;
             //Boleto.ValorOutras = 12.34;
-            Boleto.Instrucoes = "Todas as informações deste bloqueto são de exclusiva responsabilidade do cedente";
+            objBoleto.Instrucoes = "Todas as informações deste bloqueto são de exclusiva responsabilidade do cedente";
 
             //BoletoInfo Boleto = new BoletoInfo();
             // O tipo de documento pode ser selecionado para cada boleto, o padrão é DM
-            Boleto.Especie = Especies.DS;
+            objBoleto.Especie = Especies.DS;
 
             // Personaliza o boleto com seu logo
             bltFrm.Boleto.CedenteLogo = BoletoForm2.Properties.Resources.SeuLogo;
 
             // monta o boleto com os dados específicos nas classes
-            bltFrm.MakeBoleto(Cedente, Sacado, Boleto);
+            bltFrm.MakeBoleto(objCedente, objSacado, objBoleto);
 
             // É possivel também customizar a linha referente o local de pagamento:
             bltFrm.Boleto.LocalPagamento = "Pague Preferencialmente no BANCO NOSSA CAIXA S.A. ou na rede bancária até o vencimento";
@@ -179,9 +181,18 @@ namespace BoletoForm2
         {
             try
             {
-                bltFrm.PrintType = PrintTypes.Documet;
-                PrintRecibo(bltFrm);
-                bltFrm.Print(e.Graphics);
+                // monta o boleto com os dados específicos nas classes
+                BoletoForm bol = new BoletoForm();
+                bol.MakeBoleto(objCedente, objSacado, objBoleto);
+
+                // Redefine para alta qualidade (300dpi)
+                bol.PrintType = PrintTypes.Documet;
+                PrintRecibo(bol);
+                bol.Print(e.Graphics);
+
+                // Se usar a mesma instancia é necessário voltar as configurações originais
+                // bltFrm.PrintType = PrintTypes.Image;
+                // bltFrm.Boleto.Escala = Boleto.defaultEscala;
             }
             catch (Exception ex)
             {
@@ -194,16 +205,7 @@ namespace BoletoForm2
         {
             try
             {
-                // Definição dos dados do cedente
-                CedenteInfo Cedente = new CedenteInfo();
-                Cedente.Cedente = "outro cedente de outro banco!";
-                Cedente.Banco = "237";
-                Cedente.Agencia = "1234-5";
-                Cedente.Conta = "123456-7";
-                Cedente.Carteira = "06";
-                Cedente.Modalidade = "11";
-
-                // Definição dos dados do sacado
+                // Definição dos dados do sacado (nova isntancia
                 SacadoInfo Sacado = new SacadoInfo();
                 Sacado.Sacado = (string)tbDados.Rows[nReg]["Nome"];
 
@@ -217,7 +219,7 @@ namespace BoletoForm2
                 // Cria uma nova instancia totalmente idependente
                 BoletoForm bol = new BoletoForm();
                 // monta o boleto com os dados específicos nas classes
-                bol.MakeBoleto(Cedente, Sacado, Boleto);
+                bol.MakeBoleto(objCedente, Sacado, Boleto); // usando o mesmo cedente
                 bol.PrintType = PrintTypes.Documet;
                 // A definição do tipo carne ou normal já define o RenderBoleto
                 bol.Boleto.Carne = chkCarne.Checked;

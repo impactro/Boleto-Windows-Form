@@ -224,6 +224,7 @@ namespace BoletoForm2
         }
 
         #endregion
+
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnPrintTabela;
         private System.Windows.Forms.CheckBox chkPreview;
@@ -231,10 +232,11 @@ namespace BoletoForm2
         private System.Windows.Forms.CheckBox chkRecibo;
         private System.Windows.Forms.CheckBox chkExtra;
         private System.Windows.Forms.GroupBox groupBox1;
-        private BoletoForm bltFrm;
         private System.Windows.Forms.CheckBox chkLogo;
         private System.Windows.Forms.NumericUpDown nmEscala;
         private System.Windows.Forms.CheckBox chkEscala;
         private System.Windows.Forms.CheckBox chkMaisEspaco;
+        private BoletoForm bltFrm;
+
     }
 }
