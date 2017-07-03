@@ -21,3 +21,6 @@ Conheça alguns dos Principais recursos:
     * 756-SICOOB
 
 A lista completa e atualizada dos banco suportados estão descritas no [Projeto de Teste](https://github.com/impactro/Boleto-Test)
+
+Estou começando um novo projeto, Nuget, para instalar use:
+[PM> Install-Package StandardBoletoNet](https://www.nuget.org/packages/StandardBoletoNet)
