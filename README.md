@@ -1,6 +1,11 @@
-Boleto-Windows-Form
-===================
-Boleto para Windows Forms em C#, veja mais informações em [BoletoASP.com.br](http://www.boletoasp.com.br)
+
+[Este projeto esta descontinuado](https://github.com/impactro/Boleto-Test/wiki), mas aberto apenas para consulta e referência sem compromisso
+
+-----
+
+# Boleto-Windows-Form
+
+Boleto para Windows Forms em C#
 
 Conheça alguns dos Principais recursos:
 * Exibição de Boleto
